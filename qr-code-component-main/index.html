@@ -3,28 +3,32 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- displays site properly based on user's device -->
-
     <link
       rel="icon"
       type="image/png"
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
-
     <title>Frontend Mentor | QR code component</title>
 
     <style>
-      @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
 
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-        margin-top: auto;
-        padding-bottom: 10px;
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
       }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
+
+      .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        border: 0;
       }
 
       body {
@@ -33,10 +37,10 @@
         align-items: center;
         min-height: 100vh;
         margin: 0;
-        background-color: #D5E1EF;
+        background-color: #d5e1ef;
       }
 
-      .main-content{
+      main {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -50,7 +54,7 @@
         height: 499px;
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
         text-align: center;
         border-radius: 20px;
@@ -62,37 +66,50 @@
         width: 288px;
         height: 288px;
         border-radius: 10px;
+        display: block;
+        max-width: 100%;
       }
 
       .text-preset-1 {
         font-family: "Outfit", sans-serif;
         font-weight: bold;
         font-size: 22px;
-        line-height: 1.2;
-        letter-spacing: 0px;
         color: #1f314f;
+        margin-bottom: 15px;
       }
 
       .text-preset-2 {
         font-family: "Outfit", sans-serif;
-        font-weight: normal;
         font-size: 15px;
-        line-height: 1.4;
-        letter-spacing: 0.2px;
       }
 
       .paragraph {
-        width: 80%;
+        width: 87%;
         margin: 0 auto;
         text-align: center;
+      }
+
+      footer.attribution {
+        font-size: 11px;
+        text-align: center;
+        margin-top: auto;
+        padding-bottom: 10px;
+      }
+
+      footer.attribution a {
+        color: hsl(228, 45%, 44%);
       }
     </style>
   </head>
   <body>
-    <div class="main-content">
+    <main class="main-content">
+      <h1 class="sr-only">QR Code Component</h1>
       <div class="card">
         <div class="qrcode">
-          <img src="images/image-qr-code.png" alt="qrcode" />
+          <img
+            src="images/image-qr-code.png"
+            alt="QR Code to Frontend Mentor"
+          />
         </div>
         <div class="paragraph">
           <p class="text-preset-1">
@@ -104,13 +121,13 @@
           </p>
         </div>
       </div>
-    </div>
+    </main>
 
-    <div class="attribution">
+    <footer class="attribution">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
         >Frontend Mentor</a
       >. Coded by <a href="#">Mauricio Vargas</a>.
-    </div>
+    </footer>
   </body>
 </html>
